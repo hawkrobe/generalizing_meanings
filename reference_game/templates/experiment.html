@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="main_div">
+  <div id='refgame' class='container'>
+    <div class='row'>
+      <h3 class="col" id='role'></h3>
+      <p class="col" id='feedback'></p>
+    </div>
+
+    <div id="chat-history">
+      <div><blockquote id="story"></blockquote></div>
+    </div>
+    <div id="response-form" style="display:none;">
+      <input type="text" id="reproduction" class="form-control" />
+      <p></p>
+      <button id="send-message" type="button" class="btn btn-primary">Send.</button>
+    </div>
+    <div id="object-grid"></div>
+    <p id='score'></p>
+    <div id='avatar'></div>
+    <div id="trial-counter">Loading...</div>
+  </div>
+  <div id='waiting' class="container-fluid">
+    <div class="row align-items-start">
+      <div class="col" id='message'></div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col" id='submessage'></div>
+    </div>
+    <div class="row justify-content-center center-block">
+      <div class="col-md-4 pt-4">
+	<div class="progress progress-striped active">
+          <div id="partner-progress-bar" class="progress-bar progress-bar-success" role="progressbar"
+	       aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+	    <span id="progress-percentage">0%</span>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block libs %}
+{{ super() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+    <script src="/static/scripts/experiment.js" type="text/javascript"> </script>
+    <script src="/static/scripts/pubsub.js" type="text/javascript"> </script>    
+{% endblock %}

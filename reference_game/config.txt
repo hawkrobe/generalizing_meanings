@@ -1,0 +1,33 @@
+[Experiment]
+mode = live
+auto_recruit = false
+recruiter = hybrid
+network = FullyConnected
+repeats = 20
+n = 4
+
+[MTurk]
+title = Communication game
+description = Play a series of interactive matching games with other turkers in real time! Describe an object so that your partner can pick it out of a lineup. Expected completion time is between 20 and 30 minutes with a performance bonus of up to $2.40! We will also bonus you for unexpected time you spend in the waiting room. 
+keywords = psychology, research, language, communication, game, multi-player, interactive
+base_payment = 3
+lifetime = 1
+duration = 1.00
+us_only = true
+approve_requirement = 95
+contact_email_on_error = rdhawkins@princeton.edu
+ad_group = Matching
+organization_name = Princeton University
+browser_exclude_rule = MSIE, mobile, tablet
+
+[Database]
+database_url = postgresql://postgres@localhost/dallinger
+database_size = standard-2
+
+[Server]
+dyno_type = performance-m
+num_dynos_web = 1
+num_dynos_worker = 1
+redis_size = premium-5
+host = 0.0.0.0
+clock_on = false
