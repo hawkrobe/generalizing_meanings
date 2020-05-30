@@ -3,4 +3,4 @@
 * *simulations* contains webppl code to test model predictions under different scenarios
 * *reference_game* contains code to run the behavioral experiment using [Dallinger](https://dallinger.readthedocs.io/en/latest/installing_dallinger_for_users.html).
 * *data* contains aggregated data from the reference game
-* *writing* contains manuscript
+* *writing* contains manuscript with in-line analyses (using RMarkdown)
